@@ -12,11 +12,22 @@ contract Hotel {
     );
     event LogRoomDeregistered(uint256 roomNumber);
     event LogWithdrawn(uint256 amount);
+     // create an Event-limo
+    event Occupy(address _occupant, uint _value);
 
     address public owner;
     address public paymentToken;
     uint256 public paymentPerDay;
-
+    
+    
+    // payment address-limo
+    address payable public owner;
+    // Hotel room status-limo
+    enum Statuses { Vacant, Occupied } Statuses currentStatus;
+    
+   
+    
+    
     modifier onlyOwner() {
         require(msg.sender == owner, "ERROR::AUTH");
         _;
@@ -34,6 +45,8 @@ contract Hotel {
         address owner_,
         address paymentToken_,
         uint256 paymentPerDay_
+        
+        
     ) {
         owner = owner_;
         paymentToken = paymentToken_;
