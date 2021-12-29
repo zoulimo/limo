@@ -85,4 +85,7 @@ contract Hotel {
         IERC20(paymentToken).transferFrom(address(this), owner, balance);
         emit LogWithdrawn(balance);
     }
+    
+    /*
+    
 }
