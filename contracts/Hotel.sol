@@ -55,6 +55,11 @@ contract Hotel {
         // emit the event
         emit Occupy(msg.sender, msg.value);
     }
+    
+    
+    
+    
+    
     struct Room {
         bool available;
         address guest;
@@ -66,6 +71,8 @@ contract Hotel {
     constructor(
         address owner_,
         address paymentToken_,
+        //
+        address public owner;
         uint256 paymentPerDay_
         
         
