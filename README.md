@@ -1,7 +1,7 @@
-Design a payment system based on solidity smart contract.allow:
+Design a payment system based on solidity smart contracts. Allow:
 
 
-Set the payment address for the nursing home room,
-Pay for hospitalization
-And increase the room reservation function
-Check if the client can be hospitalized, i.e. the ward is full
+Set the payment address of the hotel room,
+Pay for the room
+And increase the reservation function
+Check whether the client can be hospitalized, i.e. the room is full
